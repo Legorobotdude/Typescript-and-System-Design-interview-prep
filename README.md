@@ -12,14 +12,16 @@ tutorial/
 │
 ├── data-structures/       # Interview data structure implementations
 │   ├── lru-cache.ts                  # LRU Cache with O(1) operations
-│   └── rate-limiter.ts               # Token bucket & sliding window
+│   ├── rate-limiter.ts               # Token bucket & sliding window
+│   └── trie.ts                       # Trie (Prefix Tree) for string operations
 │
 ├── system-design/         # System design concepts & patterns
 │   └── system-design-concepts.md     # Guide to system design interviews
 │
 └── tests/                 # Test files
     ├── test-lru-cache.ts
-    └── test-rate-limiter.ts
+    ├── test-rate-limiter.ts
+    └── test-trie.ts
 ```
 
 ## 🚀 Quick Start
@@ -36,6 +38,9 @@ pnpm test:lru
 
 # Test Rate Limiter
 pnpm test:rate-limiter
+
+# Test Trie
+pnpm test:trie
 ```
 
 ## 📚 What's Included
@@ -80,6 +85,13 @@ pnpm test:rate-limiter
 - Distributed rate limiter (Redis-based)
 - Express middleware integration
 
+**trie.ts** - LeetCode #208
+- Trie (Prefix Tree) implementation
+- Autocomplete functionality
+- Word frequency counting
+- Wildcard search with '.' patterns
+- Delete operations with proper cleanup
+
 ### System Design (`system-design/`)
 
 **system-design-concepts.md**
@@ -106,7 +118,7 @@ pnpm test:rate-limiter
 ### Data Structures & Algorithms
 - ✅ LRU Cache (LeetCode #146)
 - ✅ Rate Limiting algorithms
-- ✅ Trie
+- ✅ Trie (LeetCode #208)
 - ✅ Event systems
 - ✅ State machines
 
