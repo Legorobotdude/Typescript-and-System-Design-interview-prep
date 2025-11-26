@@ -1,0 +1,16 @@
+{
+  "name": "typescript-interview-prep",
+  "version": "1.0.0",
+  "description": "TypeScript and System Design learning materials",
+  "scripts": {
+    "test:rate-limiter": "ts-node tests/test-rate-limiter.ts",
+    "test:lru": "ts-node tests/test-lru-cache.ts",
+    "build": "tsc",
+    "start": "node test-rate-limiter.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.3.0",
+    "ts-node": "^10.9.0"
+  }
+}
