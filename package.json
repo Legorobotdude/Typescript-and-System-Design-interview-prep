@@ -6,6 +6,7 @@
     "test:rate-limiter": "ts-node tests/test-rate-limiter.ts",
     "test:lru": "ts-node tests/test-lru-cache.ts",
     "test:trie": "ts-node tests/test-trie.ts",
+    "test:min-stack": "ts-node tests/test-min-stack.ts",
     "build": "tsc",
     "start": "node test-rate-limiter.js"
   },
