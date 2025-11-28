@@ -16,9 +16,12 @@ tutorial/
 │   └── trie.ts                       # Trie (Prefix Tree) for string operations
 │
 ├── system-design/         # System design concepts & patterns
+│   ├── url-shortener.ts              # URL Shortener (bit.ly clone)
+│   ├── TYPESCRIPT_IMPROVEMENTS.md    # TypeScript best practices guide
 │   └── system-design-concepts.md     # Guide to system design interviews
 │
 └── tests/                 # Test files
+    ├── url-shortener.test.ts
     ├── test-lru-cache.ts
     ├── test-rate-limiter.ts
     └── test-trie.ts
@@ -33,6 +36,9 @@ pnpm install
 
 ### Run Tests
 ```bash
+# Test URL Shortener (implement first!)
+pnpm exec ts-node tests/url-shortener.test.ts
+
 # Test LRU Cache
 pnpm test:lru
 
@@ -94,6 +100,28 @@ pnpm test:trie
 
 ### System Design (`system-design/`)
 
+**url-shortener.ts** - Design a URL Shortening Service (bit.ly)
+- **Learn by implementing!** Framework provided with TODOs
+- Base62 encoding for short codes
+- Custom URL support with validation
+- TTL/expiration handling
+- Click tracking analytics
+- In-memory KV store simulation (Redis-like)
+- Comprehensive test suite included
+- **Companion guide:** `TYPESCRIPT_IMPROVEMENTS.md` with TypeScript best practices
+
+**TYPESCRIPT_IMPROVEMENTS.md** - Production TypeScript Patterns
+- 8 rules for writing professional TypeScript
+- Const vs let vs var deep dive
+- Type inference vs explicit annotations
+- Avoiding non-null assertions with type narrowing
+- Strict equality (`===` vs `==`)
+- DRY principle with helper methods
+- Template literals over string concatenation
+- Early returns vs deep nesting
+- Custom error classes for type-safe error handling
+- **Before/after comparisons** showing junior vs senior patterns
+
 **system-design-concepts.md**
 - Scalability patterns (horizontal/vertical, load balancing)
 - Caching strategies (levels, patterns, eviction)
@@ -134,18 +162,36 @@ pnpm test:trie
 
 ## 💡 Study Path
 
-1. **Week 1: TypeScript Fundamentals**
+### For Beginners: Learn TypeScript Best Practices
+
+Start with the **URL Shortener** exercise - it's designed for hands-on learning:
+
+1. **Read the system design problem** (`system-design/url-shortener.ts`)
+2. **Implement the 3 TODO methods** (15-25 lines each)
+3. **Run the tests** to validate your implementation
+4. **Review TYPESCRIPT_IMPROVEMENTS.md** to learn professional patterns
+5. **Refactor your code** using the 8 TypeScript rules
+
+This teaches you TypeScript + system design thinking in one exercise!
+
+### Full Interview Prep Path
+
+1. **Week 1: TypeScript Fundamentals + Best Practices**
    - Study `typescript-fundamentals.ts`
+   - **Complete URL Shortener exercise**
+   - **Read `TYPESCRIPT_IMPROVEMENTS.md` and apply to all code**
    - Practice with `practical-examples.ts`
-   - Implement your own utility functions
 
 2. **Week 2: Data Structures**
    - Implement LRU Cache from scratch
    - Implement Rate Limiter
+   - Implement Trie
    - Understand time/space complexity
+   - **Refactor using TypeScript best practices**
 
 3. **Week 3: System Design**
    - Read `system-design-concepts.md`
+   - Design URL Shortener at scale (distributed systems)
    - Practice drawing system diagrams
    - Do mock interviews
 
